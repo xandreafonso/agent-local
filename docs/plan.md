@@ -102,7 +102,7 @@ Comando multiplataforma para recursos do sistema:
 ## Estrutura do Projeto
 
 ```
-agent-command/
+agent-local/
 ├── .python-version    (gerado por uv init)
 ├── pyproject.toml     (gerado por uv init + uv add)
 ├── README.md          (opcional, instruções)
@@ -286,7 +286,7 @@ if __name__ == "__main__":
 
 ```bash
 # 1. Criar projeto
-cd agent-command
+cd agent-local
 uv init
 
 # 2. Adicionar dependências

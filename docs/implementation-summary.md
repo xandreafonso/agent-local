@@ -4,12 +4,12 @@
 
 ## O que foi implementado
 
-Pasta `agent-command/` com um agente LangChain/LangGraph em **arquivo único** para administração de servidores via terminal.
+Pasta `agent-local/` com um agente LangChain/LangGraph em **arquivo único** para administração de servidores via terminal.
 
 ## Estrutura final
 
 ```
-agent-command/
+agent-local/
 ├── .gitignore
 ├── .python-version          # 3.12
 ├── .venv/                   # virtual env com 42 pacotes
@@ -67,7 +67,7 @@ agent-command/
 ## Como testar
 
 ```bash
-cd agent-command
+cd agent-local
 
 # Configurar API key:
 set OPENAI_API_KEY=sk-...           # Windows CMD

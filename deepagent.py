@@ -18,7 +18,7 @@ deepagent = create_deep_agent(
         tools=tools,
         backend=LocalShellBackend(virtual_mode=False, root_dir="/"),
         memory=[
-            Path(os.path.join(Path.home(), ".deepagents", "AGENTS.md")).as_posix()[2:],
+            Path(os.path.join(Path.home(), ".agent-local", "AGENTS.md")).as_posix()[2:],
             Path(os.path.join(os.getcwd(), "AGENTS.md")).as_posix()[2:]
         ],
     )
