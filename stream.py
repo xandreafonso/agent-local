@@ -147,6 +147,10 @@ def main():
             tools=tools,
             checkpointer=InMemorySaver(),
             backend=LocalShellBackend(virtual_mode=False, root_dir="/"),
+            skills=[
+                Path(os.path.join(Path.home(), ".agent-local", "skills")).as_posix()[2:],
+                Path(os.path.join(os.getcwd(), "skills")).as_posix()[2:]
+            ],
             memory=[
                 Path(os.path.join(Path.home(), ".agent-local", "AGENTS.md")).as_posix()[2:],
                 Path(os.path.join(os.getcwd(), "AGENTS.md")).as_posix()[2:]
