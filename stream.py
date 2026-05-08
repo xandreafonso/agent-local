@@ -15,7 +15,8 @@ from deepagents.backends import LocalShellBackend
 from dotenv import load_dotenv
 
 from model import resolve_model
-from tools import get_system_info, run_shell_command
+from tools import get_system_info, run_shell_command, transcribe_audio, internet_search
+
 
 load_dotenv()
 
@@ -140,7 +141,7 @@ def main():
     max_tk = 12192  
     model, provider, model_id = resolve_model(max_tokens=max_tk, reasoning_level="medium")
 
-    tools = [get_system_info, run_shell_command]
+    tools = [get_system_info, run_shell_command, transcribe_audio, internet_search]
 
     agent = create_deep_agent(
             model=model,
